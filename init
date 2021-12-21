@@ -1,0 +1,20 @@
+# Johan David Bonilla, 12/20/2021 - 3:26AM
+
+
+#import necessary modules
+import speech_recognition as sr 
+
+
+listener = sr.Recognizer()
+
+
+with sr.Microphone() as source:
+    print('Jeff is listening...')
+    audio_pickup = listener.listen(source)
+    command = listener.recognize_google(audio_pickup)
+    print(command)
+
+
+
+
+    
